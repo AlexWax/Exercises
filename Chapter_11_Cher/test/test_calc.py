@@ -1,4 +1,4 @@
-from Study.Chapter_11_Cher.src.calc import Calc
+from Study.Chapter_11_Cher.code.calc import Calc
 
 def test_sum():
     assert Calc().sum(3, 2) == 5
