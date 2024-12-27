@@ -1,7 +1,10 @@
-from Study.Chapter_11_Cher.code.calc import Calc
+import pytest
+import Study.Chapter_11_Cher.calcul.calc as c
+Calc = c.Calc
+from conftest import input_value
 
 def test_sum():
-    assert Calc().sum(3, 2) == 5
+    assert Calc().sum(input_value, 2) == 5
 
 def test_sub():
     assert Calc().sub(10, 3) == 6

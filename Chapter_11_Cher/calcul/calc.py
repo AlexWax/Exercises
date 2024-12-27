@@ -1,3 +1,4 @@
+import pytest
 class Calc:
 
     def sum(self, a, b):
@@ -13,4 +14,4 @@ class Calc:
         return a // b
 
     def pow2(self, a):
-        return a*b
+        return a*a
