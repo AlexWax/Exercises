@@ -12,5 +12,5 @@ class Calc:
     def div(self, a, b):
         return a // b
 
-    def pow2(self, a, b):
+    def pow2(self, a):
         return a*b
