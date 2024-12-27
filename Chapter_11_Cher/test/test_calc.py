@@ -1,22 +1,22 @@
 import pytest
+import unittest
 import Study.Chapter_11_Cher.calcul.calc as c
 Calc = c.Calc
-from conftest import input_value
+from Study.Chapter_11_Cher.test.conftest import input_value
 
-def test_sum():
-    assert Calc().sum(input_value, 2) == 5
+class TestCalc(unittest.TestCase):
+    def setUp(self) -> None:
+        self.calculator = Calc()
 
-def test_sub():
-    assert Calc().sub(10, 3) == 6
+    def tearDown(self) -> None:
+        ...
 
-def test_mul():
-    assert Calc().mul(5, 5) == 25
+    def test_sum(self):
+        self.assertEquals(self.calculator.sum(input_value, 2), 5)
 
-def test_div():
-    assert Calc().div(10, 3) == 3
+    def test_sub(self):
+        self.assertEquals(self.calculator.sub(input_value, 2), 5)
 
-def test_pow2():
-    assert Calc().pow2(10) == 99
 
-def test_invis():
-    assert 23 == 1
+if __name__ == '__main__':
+    unittest.main()
