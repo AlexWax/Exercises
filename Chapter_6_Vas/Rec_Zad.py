@@ -19,7 +19,7 @@ def evklid(num1: int, num2: int) -> int:
 
 
 def been(num: int) -> str:
-    """Convert num to bin(num)"""
+    """Convert _num to bin(_num)"""
     global bin_num_rev
     if num in [0, 1]:
         bin_num_rev += str(num)

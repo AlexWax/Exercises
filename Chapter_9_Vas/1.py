@@ -6,7 +6,7 @@ class Int:
         if type(num) == int:
             value = num + self.num
         else:
-            value = self.num + num.num
+            value = self.num + num._num
         return Int(value)
 
 

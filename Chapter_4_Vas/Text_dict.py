@@ -1,6 +1,6 @@
 def create_dict(text):
     a = set(text)
-    b = [text.count(i) for i in a]
+    b = [text._count(i) for i in a]
     c = {}
     c.update(zip(list(a),b))
 

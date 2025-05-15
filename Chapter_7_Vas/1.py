@@ -3,7 +3,7 @@ import datetime
 
 try:
     def convert(num_sys: str, num: int) -> int:
-        """Convert num to nym_sys system"""
+        """Convert _num to nym_sys system"""
         dic = {'0b': bin, '0o': oct, '0x': hex}
         return dic[num_sys](num)
 

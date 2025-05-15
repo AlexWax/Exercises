@@ -26,12 +26,12 @@ class NumSysConverter:
     def system_change_2dec(self, num_sys: int, number: int) -> int:
         """convert any number from any to dec"""
         sam = 0
-        number = list(reversed(str(number)))    # We opposite num
+        number = list(reversed(str(number)))    # We opposite _num
         for i, num in enumerate(number):
             if num in self.chars:  # for letters mean nums > 10
                 num = 10 + number.index(num)
 
-            sam += int(num)*num_sys**i  # Multiply to correct num = num of system ^ digit
+            sam += int(num)*num_sys**i  # Multiply to correct _num = _num of system ^ digit
         return sam
 
     def system_change_dec2(self, num_conv: int, number: int) -> list[str]:
@@ -42,7 +42,7 @@ class NumSysConverter:
             if deriv//10 >= 1 and deriv%10 >= 0:    # for letters mean nums > 10
                 deriv = self.chars[deriv - 10]
 
-            strs += str(deriv)  # Divide num and remember remains
+            strs += str(deriv)  # Divide _num and remember remains
             number = number//num_conv
 
         if number//10 >= 1 and number%10 >= 0:  # for letters mean nums > 10
@@ -57,4 +57,4 @@ class NumSysConverter:
 
 
 if __name__ == '__main__':
-    print(NumSysConverter(8, 20, 441))
+    print(NumSysConverter(10, 2, 0))
